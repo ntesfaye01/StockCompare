@@ -1,6 +1,7 @@
-import main
 def bruteForce(marketClosePrices):
 
+    """Finds the maximum profit by comparing all pairs of buy and sell days with the assumption that
+    the buy date happens before the sell date."""
     maxProfit = 0
 
     for buyDay in range(0, len(marketClosePrices)):
@@ -9,8 +10,4 @@ def bruteForce(marketClosePrices):
             if currProfit > maxProfit:
                 maxProfit = currProfit
 
-    #print(maxProfit)
-
-closePrices = main.closePrices
-for cp in closePrices:
-    bruteForce(cp)
+    return maxProfit
