@@ -15,10 +15,12 @@ def pullData(csv_file_path):
 
     return closePrices
 
-DJIclose = pullData('DJI.csv')
-SPYclose = pullData('SPY.csv')
-QQQclose = pullData('QQQ.csv')
+DJI_close_prices = pullData('DJI.csv')
+SPY_close_prices = pullData('SPY.csv')
+QQQ_close_prices = pullData('QQQ.csv')
 
+
+#Dynamic Programming Results
 QQQ_maximum_profits = []
 for i in range(len(QQQ_close_prices)):
     annual_max_profit = dynamic.dynamic_profit_max(QQQ_close_prices[i])
