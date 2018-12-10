@@ -1,4 +1,5 @@
 import csv
+import dynamic_programming as dynamic
 
 def pullData(csv_file_path):
     with open(csv_file_path) as csv_file:
