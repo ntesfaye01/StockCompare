@@ -2,3 +2,4 @@
 .idea/vcs.xml
 *.xml
 *.iml
+__pycache__/main.cpython-37.pyc

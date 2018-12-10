@@ -12,12 +12,14 @@ with open('QQQ.csv') as csv_file:
             if int(row['Date'][:4]) == i + 1999:
                 closePrices[i].append(float(row['Close']))
 
-    for priceYear in closePrices:
-        print("=================")
-        print("=================")
-        print("=================")
-        print(priceYear)
-        print(len(priceYear))
-        print("=================")
-        print("=================")
-        print("=================")
+    closePrices = closePrices
+
+    # for priceYear in closePrices:
+    #     print("=================")
+    #     print("=================")
+    #     print("=================")
+    #     print(priceYear)
+    #     print(len(priceYear))
+    #     print("=================")
+    #     print("=================")
+    #     print("=================")

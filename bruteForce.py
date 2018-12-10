@@ -1,3 +1,4 @@
+import main
 def bruteForce(marketClosePrices):
 
     maxProfit = 0
@@ -7,3 +8,9 @@ def bruteForce(marketClosePrices):
             currProfit = marketClosePrices[sellDay] - marketClosePrices[buyDay]
             if currProfit > maxProfit:
                 maxProfit = currProfit
+
+    #print(maxProfit)
+
+closePrices = main.closePrices
+for cp in closePrices:
+    bruteForce(cp)
