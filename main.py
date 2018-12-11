@@ -6,17 +6,17 @@ def pullData(csv_file_path):
         csv_reader = csv.DictReader(csv_file, delimiter=",")
         closePrices = []
 
-        for i in range(20):
+        for i in range(18):
             closePrices.append([])
 
         for row in csv_reader:
             for i in range(20):
-                if int(row['Date'][:4]) == i + 1999:
+                if int(row['Date'][:4]) == i + 2001:
                     closePrices[i].append(float(row['Close']))
 
     return closePrices
 
-DJI_close_prices = pullData('DJI.csv')
+DJI_close_prices = pullData('VTI.csv')
 SPY_close_prices = pullData('SPY.csv')
 QQQ_close_prices = pullData('QQQ.csv')
 
