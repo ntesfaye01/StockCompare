@@ -1,31 +1,31 @@
 import main
 
-def DivideAndConquerSingleSellProfit(arr):
+def DivideAndConquer(arr):
 
     if len(arr) <= 1:
         return 0;
 
 
-    left  = arr[ : len(arr) / 2]
-    right = arr[len(arr) / 2 : ]
+    left  = arr[:len(arr) / 2]
+    right = arr[len(arr) / 2:]
 
-    leftbest  = DivideAndConquerSingleSellProfit(left)
-    rightbest = DivideAndConquerSingleSellProfit(right)
+    leftMax  = DivideAndConquer(left)
+    rightMax = DivideAndConquer(right)
 
-    crossbest = max(right) - min(left)
+    crossMax = max(right) - min(left)
 
-    return max(leftbest, rightbest, crossbest)
+    return max(leftMax, rightMax, crossMax)
 
 # arr = [1,2,3,4,5,6,7,8,9,15]
 VTIClose = main.VTI_close_prices
 QQQClose = main.QQQ_close_prices
 SPYClose = main.SPY_close_prices
 for vp in VTIClose:
-    DivideAndConquerSingleSellProfit(vp)
+    DivideAndConquer(vp)
 for qp in QQQClose:
-    DivideAndConquerSingleSellProfit(qp)
+    DivideAndConquer(qp)
 for sp in SPYClose:
-    DivideAndConquerSingleSellProfit(sp)
+    DivideAndConquer(sp)
 
 
 
