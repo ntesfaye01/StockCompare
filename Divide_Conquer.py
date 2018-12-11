@@ -17,12 +17,11 @@ def DivideAndConquerSingleSellProfit(arr):
     return max(leftbest, rightbest, crossbest)
 
 # arr = [1,2,3,4,5,6,7,8,9,15]
-#print(DivideAndConquerSingleSellProfit(arr))
-DJIClose = main.DJI_close_prices
+VTIClose = main.VTI_close_prices
 QQQClose = main.QQQ_close_prices
 SPYClose = main.SPY_close_prices
-for dp in DJIClose:
-    DivideAndConquerSingleSellProfit(dp)
+for vp in VTIClose:
+    DivideAndConquerSingleSellProfit(vp)
 for qp in QQQClose:
     DivideAndConquerSingleSellProfit(qp)
 for sp in SPYClose:

@@ -28,8 +28,8 @@ for i in range(len(QQQ_close_prices)):
     QQQ_maximum_profits.append(annual_max_profit)
 
 DJI_maximum_profits = []
-for i in range(len(DJI_close_prices)):
-    annual_max_profit = dynamic.dynamic_profit_max(DJI_close_prices[i])
+for i in range(len(VTI_close_prices)):
+    annual_max_profit = dynamic.dynamic_profit_max(VTI_close_prices[i])
     DJI_maximum_profits.append(annual_max_profit)
 
 SPY_maximum_profits = []
