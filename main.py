@@ -16,7 +16,7 @@ def pullData(csv_file_path):
 
     return closePrices
 
-DJI_close_prices = pullData('VTI.csv')
+VTI_close_prices = pullData('VTI.csv')
 SPY_close_prices = pullData('SPY.csv')
 QQQ_close_prices = pullData('QQQ.csv')
 
