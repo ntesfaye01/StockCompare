@@ -1,4 +1,5 @@
 import csv
+import time
 import dynamic_programming as dynamic
 
 def pullData(csv_file_path):
@@ -36,3 +37,11 @@ SPY_maximum_profits = []
 for i in range(len(SPY_close_prices)):
     annual_max_profit = dynamic.dynamic_profit_max(SPY_close_prices[i])
     SPY_maximum_profits.append(annual_max_profit)
+
+startTime = time.time()
+
+for cp in QQQ_close_prices*400:
+    dynamic.dynamic_profit_max(cp)
+
+endTime = time.time()
+print("Final time: " + str(endTime - startTime))
