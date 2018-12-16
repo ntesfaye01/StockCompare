@@ -1,21 +1,19 @@
-import time
-import main
-def bruteForce(marketClosePrices):
+def brute_force(market_close_prices):
+    """Function that uses brute force to find the maximum profit by comparing all pairs of buy and sell days with
+        the assumption that the buy date happens before the sell date. Takes in an array of market close prices for
+        a year, returning the greatest profit to be made buying on one day and selling on one day."""
 
+    max_profit = 0
 
-    """Finds the maximum profit by comparing all pairs of buy and sell days with the assumption that
-    the buy date happens before the sell date."""
-    maxProfit = 0
-
-    for buyDay in range(0, len(marketClosePrices)):
-        for sellDay in range(buyDay + 1, len(marketClosePrices)):
+    for buy_day in range(0, len(market_close_prices)):
+        for sell_day in range(buy_day + 1, len(market_close_prices)):
             # if marketClosePrices[buyDay] > budget:
             #     continue
-            currProfit = marketClosePrices[sellDay] - marketClosePrices[buyDay]
-            if currProfit > maxProfit:
-                maxProfit = currProfit
+            curr_profit = market_close_prices[sell_day] - market_close_prices[buy_day]
+            if curr_profit > max_profit:
+                max_profit = curr_profit
 
-    return maxProfit
+    return max_profit
 
 
 
